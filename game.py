@@ -51,17 +51,17 @@ def check_cheese(mouse: Mouse, cheese: Cheese):
         print("Nom nom nom :D")
         set_cheese_pos()
 
-def init():
+def init(width = 5, height = 5, scale = 1.):
     global board, mouse, cheese
-    board = Board(5, 5, 80)
+    board = Board(width, height, scale * 80)
     mouse = Mouse(board)
     cheese = Cheese(board)
     mouse.set_pos(1, 1)
     set_cheese_pos()
 
-def init_maze():
+def init_maze(width = 5, height = 5, scale = 1.):
     global board, mouse, cheese
-    board = MazeBoard(5, 5, 80)
+    board = MazeBoard(width, height, scale * 80)
     mouse = Mouse(board)
     cheese = Cheese(board)
     mouse.set_pos(1, 1)
